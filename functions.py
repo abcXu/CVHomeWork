@@ -94,7 +94,7 @@ def train(args, logger, epoch, model, train_loader, criterion, optimizer):
     return np.mean(losses)
 
 
-def test(args, logger, epoch, model, test_loader, criterion, cache_dir):
+def test(args, logger, epoch, model, test_loader, criterion, cache_dir,):
     model.eval()
     num_batches = len(test_loader)
     losses, mses, ssims = [], [], []

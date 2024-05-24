@@ -7,6 +7,7 @@ from dataset import Moving_MNIST
 
 
 
+
 def setup(args):
     if args.model == 'SwinLSTM-D':
         from models.SwinLSTM_D import SwinLSTM
@@ -27,7 +28,7 @@ def setup(args):
                               num_workers=args.num_workers, shuffle=True, pin_memory=True, drop_last=True)
 
     valid_loader = DataLoader(valid_dataset, batch_size=args.valid_batch_size,
-                             num_workers=args.num_workers, shuffle=False, pin_memory=True, drop_last=True)
+                              num_workers=args.num_workers, shuffle=False, pin_memory=True, drop_last=True)
 
     return model, criterion, optimizer, train_loader, valid_loader
 
